@@ -1,7 +1,6 @@
--- ============================================================
--- JOËL ELEC — Table des demandes de devis
--- À exécuter dans phpMyAdmin ou via CLI MySQL
--- ============================================================
+
+-- Table de devis
+-- À exécuter dans phpMyAdmin
 
 CREATE DATABASE IF NOT EXISTS joel_elec
     CHARACTER SET utf8mb4
@@ -19,7 +18,7 @@ CREATE TABLE IF NOT EXISTS devis (
     localisation    VARCHAR(150)    NOT NULL,
     message         TEXT            DEFAULT NULL,
     photo           VARCHAR(255)    DEFAULT NULL,       -- chemin relatif vers le fichier uploadé
-    ip_client       VARCHAR(45)     DEFAULT NULL,       -- IPv4 ou IPv6, utile anti-spam
+    ip_client       VARCHAR(45)     DEFAULT NULL,       -- IPv4 ou IPv6, anti-spam
     date_creation   DATETIME        NOT NULL DEFAULT CURRENT_TIMESTAMP,
 
     INDEX idx_date (date_creation),

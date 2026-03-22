@@ -1,9 +1,4 @@
-/**
- * JOËL ELEC — Soumission du formulaire de devis via fetch API
- *
- * Envoie les données en multipart/form-data vers /api/submit-devis.php
- * Affiche le retour JSON (succès ou erreur) dans la zone #form-feedback
- */
+
 
 (function () {
     'use strict';
@@ -17,16 +12,12 @@
     form.addEventListener('submit', async function (e) {
         e.preventDefault();
 
-        // Masquer le précédent message
         hideFeedback();
 
-        // Validation côté client (basique, la vraie validation est côté serveur)
         if (!validateForm()) return;
 
-        // Préparer les données du formulaire (y compris le fichier)
         const formData = new FormData(form);
 
-        // Désactiver le bouton pendant l'envoi
         setLoading(true);
 
         try {
@@ -54,9 +45,6 @@
         }
     });
 
-    /**
-     * Validation côté client avant envoi.
-     */
     function validateForm() {
         const nom       = form.querySelector('[name="nom"]').value.trim();
         const telephone = form.querySelector('[name="telephone"]').value.trim();
@@ -96,7 +84,6 @@
             return false;
         }
 
-        // Validation du fichier (si présent)
         if (photo) {
             const allowedTypes = ['image/jpeg', 'image/png'];
             const maxSize = 2 * 1024 * 1024; // 2 Mo
@@ -115,16 +102,10 @@
         return true;
     }
 
-    /**
-     * Validation email basique.
-     */
     function isValidEmail(email) {
         return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     }
 
-    /**
-     * Affiche un message de retour (succès ou erreur).
-     */
     function showFeedback(message, type) {
         feedback.textContent = message;
         feedback.className = 'form-feedback form-feedback--' + type;
@@ -134,17 +115,11 @@
         feedback.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
 
-    /**
-     * Masque le message de retour.
-     */
     function hideFeedback() {
         feedback.style.display = 'none';
         feedback.textContent = '';
     }
 
-    /**
-     * Active/désactive l'état de chargement du bouton.
-     */
     function setLoading(isLoading) {
         btnSend.disabled = isLoading;
         btnSend.textContent = isLoading ? 'Envoi en cours...' : 'Envoyer la demande';
