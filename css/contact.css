@@ -1,0 +1,374 @@
+* {
+    position: relative;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    width: 100%;
+    margin-left: 0;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+/*declaration des variaables*/
+:root {
+    --text-color: #e8dc86;
+    --text-fond: yellow;
+    --text-hover: #f8eb8f69;
+    --button-hover: #7a6a01;
+}
+
+img {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav {
+    border: none;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: black;
+    justify-content: space-around;
+    transform: translateZ(0);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.logo {
+    width: 170px;
+    height: 150px;
+}
+
+.btm-logo {
+    text-align: center;
+    display: flex;
+    height: 110px;
+    width: auto;
+}
+/*personalisation du logo*/
+
+.navLinks {
+    display: flex;
+    place-items: center;
+    list-style: none;
+    gap: 50px;
+    color: white;
+    font-size: 18px;
+}
+
+li {
+    transition: all 0.5s ease;
+    transform: translateY(0);
+    list-style: none;
+    cursor: pointer;
+}
+
+li:hover {
+    transition: all 0.5s ease;
+    transform: translateY(-4px);
+    color: var(--text-color);
+}
+
+.li-primaire {
+    color: var(--text-color);
+}
+
+.btm-nav-contact {
+    font-size: 14px;
+    padding: 7px;
+    border-radius: 5px;
+    border: none;
+    background: var(--text-color);
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.btm-nav-contact:hover {
+    transition: all 0.5s ease;
+    background: var(--button-hover);
+    transform: scale(0.98);
+}
+
+.lien-contact {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+.lien-contact:hover {
+    color: rgba(175, 175, 5, 0.959);
+    transition: all 0.5s ease;
+    margin: 0;
+    transform: scale(1.04)translateY(-4px);
+}
+
+/*personalisation de la navbar sur petit ecran*/
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    transition: all 0.8s ease;
+}
+
+.hamburger:hover {
+    transition: all 0.8s ease;
+    transform: scale(1.1);
+}
+
+.hamburger span {
+    display: block;
+    width: 24px;
+    height: 3px;
+    margin: 5px;
+    background: var(--text-color);
+}
+
+/*blog hero*/
+
+.contact-hero{
+    height: 60vh;
+    background: url("../images/Barred_exterieurmurmaison.webp") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.contact-hero-content{
+    background: rgba(0,0,0,0.5);
+    padding: 40px;
+    color: white;
+    border-radius: 10px;
+}
+
+/*information de contact*/
+
+.contact-info{
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.info-container{
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    gap: 25px;
+}
+
+.info-box{
+    background: var(--text-hover);
+    padding: 25px;
+    border-radius: 10px;
+}
+
+i {
+    color: var(--text-fond);
+    filter: drop-shadow(1px 1px 1px black);
+}
+
+/*formulaire*/
+
+.contact-form-section{
+    padding: 80px 10%;
+    background: var(--text-hover);
+    text-align: center;
+}
+
+.contact-form-container{
+    max-width: 600px;
+    margin: auto;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+article {
+    display: flex;
+    place-content: center;
+    place-items: center;
+    font-size: 20px;
+    gap: 30px;
+}
+
+.contact-form input,
+.contact-form textarea, .select{
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+}
+
+input:hover {
+    transition: all 0.5s ease;
+    background: var(--text-hover);
+}
+
+select:hover {
+    background: var(--text-hover);
+}
+option {
+    background: var(--text-hover);
+}
+
+textarea {
+    height: 15vh;
+}
+
+.contact-form button{
+    background: var(--text-color);
+    font-size: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+button:hover {
+    transition: all 0.5s ease;
+    transform: scale(0.98);
+    background: var(--button-hover);
+    color: white;
+}
+
+/*carte google maps*/
+
+.contact-map{
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.map-container{
+    margin-top: 40px;
+}
+
+/*call to action*/
+
+.contact-cta{
+    padding: 80px 10%;
+    background: #111;
+    color: white;
+    text-align: center;
+}
+
+.contact-btn{
+    margin-top: 20px;
+    background: var(--text-color);
+    color: black;
+    padding: 12px 25px;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-btn:hover {
+    transition: all 0.5s ease;
+    transform: scale(0.98);
+    background: var(--button-hover);
+}
+
+/*responsive android*/
+
+@media (max-width: 900px) {
+
+    .navLinks {
+        flex-direction: column;
+        display: none;
+        place-items: initial;
+        gap: 20px;
+        top: 5dvh;
+        right: 0;
+        height: 100dvh;
+        width: 22vh;
+        position: fixed;
+        background: #2d2b1a;
+        border-radius: 15px 0 0 15px;
+        padding: 15px;
+        transition: all 1s ease;
+        transform: translateX(110px);
+        opacity: 0;
+        z-index: 999;
+        border: none;
+        border-left: 3px solid var(--text-color);
+        border-top: 3px solid var(--text-color);
+        box-shadow: -1px -1px 5px var(--text-fond);
+    }
+
+    .navLinks.open {
+        display: flex;
+        opacity: 1;
+        transition: all 1s ease;
+        transform: translateX(0);
+        z-index: 10;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .logo {
+        width: 100px;
+        height: 90px;
+    }
+
+    .btm-logo {
+        height: 60px;
+    }
+
+/*Description de la navbar*/
+}
+
+/*programme d'apparution des elements a l'ecran*/
+
+.haut {
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: all 1s ease;
+}
+.haut.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+.bas {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease;
+}
+.bas.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+.gauche {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 1s ease;
+}
+.gauche.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+.droit {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 1s ease;
+}
+.droit.active {
+    opacity: 1;
+    transform: translateX(0);
+}

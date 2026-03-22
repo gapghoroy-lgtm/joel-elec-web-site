@@ -1,0 +1,25 @@
+# ============================================================
+# JOËL ELEC — Protection du dossier uploads
+#
+# TOUS les fichiers sont inaccessibles directement via HTTP.
+# L'accès aux photos se fait uniquement via /api/view-photo.php
+# qui lit les fichiers côté serveur avec readfile() après
+# vérification d'un token HMAC.
+# ============================================================
+
+# Interdire tout accès HTTP direct
+Require all denied
+
+# Désactiver le moteur PHP dans ce répertoire (sécurité supplémentaire)
+<IfModule mod_php.c>
+    php_flag engine off
+</IfModule>
+<IfModule mod_php7.c>
+    php_flag engine off
+</IfModule>
+<IfModule mod_php8.c>
+    php_flag engine off
+</IfModule>
+
+# Désactiver le listing du répertoire
+Options -Indexes
