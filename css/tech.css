@@ -1,5 +1,7 @@
-* {
-    position: relative;
+*::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -44,7 +46,6 @@ nav {
     width: 100%;
     background: black;
     justify-content: space-around;
-    transform: translateZ(0);
     position: fixed;
     top: 0;
     left: 0;
@@ -146,14 +147,17 @@ li:hover {
 
 header {
     color: white;
-    background-image: url(../images/annexe\ \(8\).jpg);
+    background: url(../images/annexe\ \(8\).jpg);
+    background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    padding-left: 2%;
+    padding: 1%;
     border-radius: 0 0 20px 20px;
     height: 100dvh;
+    width: auto;
     display: flex;
+    position: relative;
     align-items: center;
     justify-content: space-around;
     filter: brightness(0.7);
@@ -336,7 +340,7 @@ p2 {
 .icon-home:hover {
     transition: all 0.5s ease;
     transform: scale(1.05)translateY(-2px);
-    box-shadow: 1px 1px 10px var(--text-color);
+    filter: drop-shadow(1px 1px 5px var(--button-hover));
     border-radius: 50%;
 }
 
@@ -593,7 +597,6 @@ footer {
 /*responsive tablette/android*/
 
 @media (max-width: 900px) {
-
     .navLinks {
         flex-direction: column;
         display: none;
@@ -602,13 +605,11 @@ footer {
         top: 5dvh;
         right: 0;
         height: 100dvh;
-        width: 22vh;
+        width: 20vh;
         position: fixed;
         background: #2d2b1a;
         border-radius: 15px 0 0 15px;
         padding: 15px;
-        transition: all 1s ease;
-        transform: translateX(110px);
         opacity: 0;
         z-index: 999;
         border: none;
@@ -619,9 +620,7 @@ footer {
     .navLinks.open {
         display: flex;
         opacity: 1;
-        transition: all 1s ease;
-        transform: translateX(0);
-        z-index: 10;
+        z-index: 10; 
     }
     .hamburger {
         display: block;
@@ -637,8 +636,9 @@ footer {
 /*Description de la navbar*/
 
     header {
-        padding-top: 15%;
-        height: 100dvh;
+        padding-top: 22%;
+        margin-top: 2%;
+        height: auto;
         flex-wrap: wrap;
     }
 
@@ -727,24 +727,3 @@ footer {
     transform: translateY(0);
 }
 
-.gauche {
-    opacity: 0;
-    transform: translateX(-50px);
-    transition: all 1s ease;
-}
-
-.gauche.active {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-.droit {
-    opacity: 0;
-    transform: translateX(50px);
-    transition: all 1s ease;
-}
-
-.droit.active {
-    opacity: 1;
-    transform: translateX(0);
-}
