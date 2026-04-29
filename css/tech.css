@@ -558,7 +558,7 @@ footer {
 
 .btm-footer {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     line-height: 1.5;
     font-size: 110%;
     place-content: center;
@@ -694,12 +694,6 @@ footer {
 
     .section3-text-description-img {
         opacity: 1;
-    }
-
-/*description du footer/pied de et fin de page*/
-
-    footer {
-        font-size: 9px;
     }
 }
 
