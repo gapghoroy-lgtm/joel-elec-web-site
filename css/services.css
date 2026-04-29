@@ -378,7 +378,7 @@ details p{
         top: 5dvh;
         right: 0;
         height: 100dvh;
-        width: 22vh;
+        width: 20vh;
         position: fixed;
         background: #2d2b1a;
         border-radius: 15px 0 0 15px;
@@ -431,22 +431,4 @@ details p{
 .bas.active {
     opacity: 1;
     transform: translateY(0);
-}
-.gauche {
-    opacity: 0;
-    transform: translateX(-50px);
-    transition: all 1s ease;
-}
-.gauche.active {
-    opacity: 1;
-    transform: translateX(0);
-}
-.droit {
-    opacity: 0;
-    transform: translateX(50px);
-    transition: all 1s ease;
-}
-.droit.active {
-    opacity: 1;
-    transform: translateX(0);
 }
