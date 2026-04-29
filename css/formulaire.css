@@ -207,33 +207,6 @@ li:hover {
     color: white;
 }
 
-.btn-send:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-}
-
-/*messages de retour du formulaire*/
-
-.form-feedback {
-    padding: 14px 18px;
-    border-radius: 5px;
-    font-size: 15px;
-    line-height: 1.5;
-    text-align: center;
-}
-
-.form-feedback--success {
-    background: #d4edda;
-    color: #155724;
-    border: 1px solid #c3e6cb;
-}
-
-.form-feedback--error {
-    background: #f8d7da;
-    color: #721c24;
-    border: 1px solid #f5c6cb;
-}
-
 .quick-contact{
     text-align: center;
     padding: 50px;
@@ -269,7 +242,7 @@ li:hover {
         top: 5dvh;
         right: 0;
         height: 100dvh;
-        width: 22vh;
+        width: 20vh;
         position: fixed;
         background: #2d2b1a;
         border-radius: 15px 0 0 15px;
@@ -323,21 +296,4 @@ li:hover {
     opacity: 1;
     transform: translateY(0);
 }
-.gauche {
-    opacity: 0;
-    transform: translateX(-50px);
-    transition: all 1s ease;
-}
-.gauche.active {
-    opacity: 1;
-    transform: translateX(0);
-}
-.droit {
-    opacity: 0;
-    transform: translateX(50px);
-    transition: all 1s ease;
-}
-.droit.active {
-    opacity: 1;
-    transform: translateX(0);
-}
+
