@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
 
     <meta charset="UTF-8">
@@ -40,11 +40,11 @@
 
            <li title="contact"><a href="contact.html">Contact</a></li>
 
-           <li class="lien-contact"><a href="#" class="lien-contact" title="me contacter">+237 697787645</a></li>
+           <li class="lien-contact"><a href="https://wa.me/237697787645" class="lien-contact" title="me contacter">+237 697787645</a></li>
 
            <li>
-                <a href="#">
-                    <button class="btm-nav-contact" onclick="window.location.href='formulaire.html'" title="demander un devis gratuit">
+                <a href="formulaire.html">
+                    <button class="btm-nav-contact" onclick="SubmitEvent" title="demander un devis gratuit">
                         Demander un devis
                     </button>
                 </a>
@@ -66,9 +66,9 @@
 
         <div class="quote-hero-content">
 
-            <h1 class="gauche">Demander un devis gratuit</h1>
+            <h1 class="bas">Demander un devis gratuit</h1>
 
-            <p class="droit">
+            <p class="bas">
                 Remplissez ce formulaire pour obtenir une estimation rapide
                 et personnalisée pour vos travaux électriques.
             </p>
@@ -93,51 +93,48 @@
 
     <section class="quote-form-section">
 
-        <form action="/api/submit-devis.php" method="POST" class="quote-form" id="devis" enctype="multipart/form-data" novalidate>
-
+        <form class="quote-form" id="devis">
+        
             <h2 class="bas">Informations personnelles</h2>
+        
+            <input class="input bas" type="text" placeholder="Nom complet" required>
 
-            <input class="input gauche" type="text" name="nom" placeholder="Nom complet" required minlength="2" maxlength="100">
+            <input class="input bas" type="tel" placeholder="Téléphone" required>
 
-            <input class="input droit" type="tel" name="telephone" placeholder="Téléphone" required>
-
-            <input class="input bas" type="email" name="email" placeholder="Email (obligatoire)">
-
+            <input class="input bas" type="email" placeholder="Email">
+        
             <h2 class="bas">Détails du projet</h2>
-
-            <select class="input gauche" name="service" required>
+        
+            <select class="input bas" required>
                 <option value="" style="display: none;" disabled selected>Type de service</option>
-                <option value="Installation électrique">Installation électrique</option>
-                <option value="Dépannage">Dépannage</option>
-                <option value="Rénovation">Rénovation</option>
-                <option value="Maintenance">Maintenance</option>
+                <option>Installation électrique</option>
+                <option>Dépannage</option>
+                <option>Rénovation</option>
+                <option>Maintenance</option>
             </select>
-
-            <select class="input droit" name="type_batiment" required>
+        
+            <select class="input bas" required>
                 <option value="" style="display: none;" disabled selected>Type de bâtiment</option>
-                <option value="Maison">Maison</option>
-                <option value="Appartement">Appartement</option>
-                <option value="Bureau">Bureau</option>
-                <option value="Commerce">Commerce</option>
-                <option value="Autres">Autres</option>
+                <option>Maison</option>
+                <option>Appartement</option>
+                <option>Bureau</option>
+                <option>Commerce</option>
+                <option>Autres</option>
             </select>
-
-            <input class="input gauche" type="text" name="localisation" placeholder="Localisation (ville/quartier)" required minlength="2" maxlength="150">
-
-            <textarea class="input droit" name="message" placeholder="Décrivez votre projet..." maxlength="2000"></textarea>
-
+        
+            <input class="input bas" type="text" placeholder="Localisation (ville/quartier)" required>
+        
+            <textarea class="input bas" placeholder="Décrivez votre projet..."></textarea>
+        
             <label class="file-upload haut" style="display: flex; flex-direction: column; gap: 10px;">
-                Ajouter une photo (optionnel — JPG ou PNG, max 2 Mo)
-                <input class="input bas" type="file" name="photo" accept=".jpg,.jpeg,.png">
+                Ajouter une photo (optionnel)
+                <input class="input bas" type="file">
             </label>
-
-            <!-- Zone de message de retour -->
-            <div id="form-feedback" class="form-feedback" style="display: none;"></div>
-
-            <button type="submit" class="btn-send" id="btn-send">Envoyer la demande</button>
-
+        
+            <button type="submit" class="btn-send">Envoyer la demande</button>
+        
         </form>
-
+    
     </section>
 
     <!--infos contact-->
@@ -148,11 +145,10 @@
 
         <p class="bas">Contactez-nous directement sur WhatsApp</p>
     
-        <a href="#" class="whatsapp-btn"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+        <a href="https://wa.me/237697787645" class="whatsapp-btn"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
 
     </section>
 
     <script src="js/tech.js"></script>
-    <script src="js/devis.js"></script>
 </body>
 </html>
