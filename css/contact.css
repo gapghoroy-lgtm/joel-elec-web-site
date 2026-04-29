@@ -139,7 +139,10 @@ li:hover {
 
 .contact-hero{
     height: 60vh;
-    background: url("../images/Barred_exterieurmurmaison.webp") center/cover no-repeat;
+    background-image: url("../images/Barred_exterieurmurmaison.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -295,7 +298,7 @@ button:hover {
         top: 5dvh;
         right: 0;
         height: 100dvh;
-        width: 22vh;
+        width: 20vh;
         position: fixed;
         background: #2d2b1a;
         border-radius: 15px 0 0 15px;
@@ -353,22 +356,4 @@ button:hover {
 .bas.active {
     opacity: 1;
     transform: translateY(0);
-}
-.gauche {
-    opacity: 0;
-    transform: translateX(-50px);
-    transition: all 1s ease;
-}
-.gauche.active {
-    opacity: 1;
-    transform: translateX(0);
-}
-.droit {
-    opacity: 0;
-    transform: translateX(50px);
-    transition: all 1s ease;
-}
-.droit.active {
-    opacity: 1;
-    transform: translateX(0);
 }
