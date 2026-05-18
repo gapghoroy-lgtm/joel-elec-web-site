@@ -652,12 +652,12 @@ footer {
     }
 
     .profil {
-        width: 27dvh;
-        height: 40dvh;
+        width: 28dvh;
+        height: 45dvh;
         border-radius: 50%;
         filter: drop-shadow(3px 4px 10px black);
         transition: all 1s ease;
-        animation: flotter 5s infinite;
+        animation: none;
     }
 
     .name-profil  {
@@ -694,6 +694,21 @@ footer {
 
     .section3-text-description-img {
         opacity: 1;
+    }
+}
+
+/*====================================================
+---------media header mobile----------------------
+======================================================*/
+
+@media (max-width: 900px) {
+    header {
+        background: linear-gradient(140deg, rgb(17, 17, 0), rgb(65, 65, 21));
+        color: white;
+    }
+
+    blockquote {
+        color: white;
     }
 }
 
